@@ -5,14 +5,11 @@ using namespace std;
 void BubbleSort(vector<int>& arr) {
     int size = arr.size();
     for (int i = 0; i < size - 1; ++i) {
-        bool swapped = false;
         for (int j = 0; j < size - i - 1; ++j) {
             if (arr[j] > arr[j + 1]) {
                 swap(arr[j], arr[j + 1]);
-                swapped = true;
             }
         }
-        if (!swapped) break; // Exit early if no swaps were made
     }
 }
 
@@ -33,9 +30,3 @@ int main() {
         cin >> arr[i];
 
     BubbleSort(arr);
-    cout << "Sorted array: \n";
-    display(arr);
-
-    return 0;
-}
-
